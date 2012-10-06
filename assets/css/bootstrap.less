@@ -1,0 +1,145 @@
+// CSS Reset
+@import "less/reset.less";
+
+// Web Fonts
+@import "custom/core/fonts.less";
+
+// Core variables and mixins
+@import "less/variables.less";
+@import "custom/core/variables.less"; // Override with our own variables
+@import "less/mixins.less";
+@import "custom/core/mixins.less"; // Override with our own mixins
+
+// Grid system and page structure
+@import "less/scaffolding.less";
+@import "less/grid.less";
+@import "less/layouts.less";
+
+// Base CSS
+@import "less/type.less";
+@import "less/code.less";
+@import "less/forms.less";
+@import "less/tables.less";
+
+// Components: common
+@import "less/sprites.less";
+@import "less/dropdowns.less";
+@import "less/wells.less";
+@import "less/component-animations.less";
+@import "less/close.less";
+
+// Components: Buttons & Alerts
+@import "less/buttons.less";
+@import "less/button-groups.less";
+@import "less/alerts.less"; // Note: alerts share common CSS with buttons and thus have styles in buttons.less
+
+// Components: Nav
+@import "less/navs.less";
+@import "less/navbar.less";
+@import "custom/components/navbar.less";
+@import "less/breadcrumbs.less";
+@import "less/pagination.less";
+@import "less/pager.less";
+
+// Components: Popovers
+@import "less/modals.less";
+@import "less/tooltip.less";
+@import "less/popovers.less";
+
+// Components: Misc
+@import "less/thumbnails.less";
+@import "less/labels-badges.less";
+@import "less/progress-bars.less";
+@import "less/accordion.less";
+@import "less/carousel.less";
+@import "less/hero-unit.less";
+
+// Layout components
+@import "custom/layout/header.less";
+@import "custom/layout/masthead.less";
+@import "custom/layout/content.less";
+@import "custom/layout/sidebar.less";
+@import "custom/layout/footer.less";
+
+// Custom components
+@import "custom/components/custom-prepend.less";
+@import "custom/components/page-curl.less";
+@import "custom/components/feedback-bubble.less";
+@import "custom/components/page-headers.less";
+@import "custom/components/custom-carousel.less";
+@import "custom/components/arrows.less";
+@import "custom/components/thumbnails.less";
+
+// Page specific components
+@import "custom/components/pages.less";
+
+// Utility classes
+@import "less/utilities.less"; // Has to be last to override when necessary
+
+// Responsive 
+// break this out into its own file since using "twitter/bootstrap/responsive.less" reimports variables/mixins, which kills our overrides
+
+// RESPONSIVE CLASSES
+// ------------------
+
+@import "less/responsive-utilities.less";
+
+
+// MEDIA QUERIES
+// ------------------
+
+// Large desktops
+// disable the large 1200 px layout
+//@import "twitter/bootstrap/responsive-1200px-min.less";
+
+// Tablets to regular desktops
+@import "less/responsive-768px-979px.less";
+
+// Phones to portrait tablets and narrow desktops
+@import "less/responsive-767px-max.less";
+
+
+// RESPONSIVE NAVBAR
+// ------------------
+
+// From 979px and below, show a button to toggle navbar contents
+@import "less/responsive-navbar.less";
+
+
+@media (max-width: 767px) {
+  footer#footer {
+    margin-left: -20px; 
+    margin-right: -20px;
+    padding-left: 20px; 
+    padding-right: 20px;
+    
+    #footer-content {
+      height: auto;
+    }
+  }
+  
+  #wrap {
+    min-height: auto;
+    height: auto !important;
+    margin: 0 auto 0;
+  }
+
+  #push, #footer {
+    height: auto;
+  }
+  
+  #sidebar {  
+    margin-left: -@sidebarBorderThickness;
+  }
+}
+
+@media (max-width: 979px) {
+  footer#footer {
+    position: static; 
+    z-index: @zindexFixedNavbar;
+  }
+  
+  #sidebar {  
+    margin-left: @gridGutterWidth768 - @sidebarBorderThickness;
+  }
+}

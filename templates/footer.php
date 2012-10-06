@@ -1,7 +1,84 @@
-<footer id="content-info" class="container" role="contentinfo">
-  <?php dynamic_sidebar('sidebar-footer'); ?>
-  <p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?></p>
-</footer>
+<div id="footer-content" class="container" role="contentinfo">
+  <div class="row">
+    <div class="span3">
+      <div class="footer-header">
+        <i class="icon-bar-chart icon-white"></i> <h3>Statistics</h3>
+      </div>
+      <em>Lorem Ipsum is simply dummy text of the printing and typesetting industry</em>
+      <dl class="dl-horizontal">
+        <dt>18</dt><dd>Blog Posts</dd>
+        <dt>21</dt><dd>Tags</dd>
+        <dt>06</dt><dd>Authors</dd>
+      </dl>
+    </div>
+    <div class="span3">
+      <div class="footer-header">
+        <i class="icon-list icon-white"></i> <h3>Latest Posts</h3>
+      </div>
+      <ul class="unstyled">
+        <li>PR101</li>
+        <li>How to spell Uber</li>
+        <li>Snorting with co-workers</li>
+        <li>I am a ballerina</li>
+        <li>Photoshop files and more</li>
+      </ul>
+    </div>
+    <div class="span3">
+      <div class="footer-header">
+        <i class="icon-picture icon-white"></i> <h3>Clients</h3>
+      </div>
+      <ul class="thumbnails">
+        <li class="span1">
+          <a href="#" class="thumbnail"><img src="http://placehold.it/60x60" alt=""></a>
+        </li>
+        <li class="span1">
+          <a href="#" class="thumbnail"><img src="http://placehold.it/60x60" alt=""></a>
+        </li>
+        <li class="span1">
+          <a href="#" class="thumbnail"><img src="http://placehold.it/60x60" alt=""></a>
+        </li>
+        <li class="span1">
+          <a href="#" class="thumbnail"><img src="http://placehold.it/60x60" alt=""></a>
+        </li>
+        <li class="span1">
+          <a href="#" class="thumbnail"><img src="http://placehold.it/60x60" alt=""></a>
+        </li>
+        <li class="span1">
+          <a href="#" class="thumbnail"><img src="http://placehold.it/60x60" alt=""></a>
+        </li>
+      </ul>
+    </div>
+    <div class="span3">
+      <div class="footer-header">
+        <i class="icon-twitter icon-white"></i> <h3>Tweets</h3>                
+      </div>
+      <div class='tweet'></div>
+    </div>
+    
+  </div>
+</div>
+<?php dynamic_sidebar('sidebar-footer'); ?>
+<div id="footer-navbar" class="navbar navbar-static-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <p class="navbar-text pull-left"><small>Copyright &copy; <?php echo date('Y'); ?> AirPR. All Rights Reserved.</small></p>
+      <div class="span1 pull-right">
+        <ul class="nav pull-right">
+          <li><a href="#"><i class="icon-chevron-up icon-white icon-large"></i></a></li>
+        </ul>
+      </div>
+      <ul class="nav pull-right">
+        <li class="divider-vertical"></li>
+        <li><a href="#"><i class="icon-facebook icon-white icon-large"></i></a></li>
+        <li class="divider-vertical"></li>
+        <li><a href="#"><i class="icon-twitter icon-white icon-large"></i></a></li>
+        <li class="divider-vertical"></li>
+        <li><a href="#" onClick='window.open("https://www.google.com/talk/service/badge/Start?tk=z01q6amlq2kkftdmgirlgnjoftmdtlnvcdvuf0du34b4thuc8vbs6mkj51sceq06b0aitc4galcefsvg6bci0plrosm32d6gpra885gvgl80q5aa3j6rrr7pi25j8822vogotivkit89ahe35gg55eq3nke4f7bsl3cva0l4s","Chat","width=200,height=400");' title="Click here to chat with AirPR"><i class="icon-comment icon-white icon-large"></i></a></li>
+        <li class="divider-vertical"></li>
+      </ul>
+    </div>
+  </div>
+</div>
 
 <?php if (GOOGLE_ANALYTICS_ID) : ?>
 <script>

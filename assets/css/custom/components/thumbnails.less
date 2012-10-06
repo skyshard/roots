@@ -1,0 +1,37 @@
+// The actual thumbnail (can be `a` or `div`)
+.thumbnail {
+  background-color: white;
+  display: block;
+  padding: 10px;
+  line-height: @baseLineHeight;
+  border: 1px solid #ddd;
+  .border-radius(5px);
+  .box-shadow(0 1px 3px rgba(0,0,0,.1));
+  .transition(all .2s ease-in-out);
+  position: relative;
+}
+
+.thumbnail .bid-header {
+  position: absolute;
+  top: 13px;
+  left: 0px;
+  border: 1px solid fade(white, 50%);
+  background-color: fade(@footerNavbarBackground, 60%);
+  width: 100%;
+  min-height: 40px;
+}
+
+.thumbnail .bid-price, .thumbnail .icon-reorder {
+  font-size: 15px;
+  color: lighten(@contentBackground, 10%);
+  margin: 13px 5px 0px 0px;
+  display: inline-block;
+}
+.thumbnail .bid-price {
+  font-size: 22px;
+  margin: 13px 0px 0px 5px;
+}
+
+.thumbnail > img {
+  border: 1px solid lighten(@contentBackground, 30%);
+}

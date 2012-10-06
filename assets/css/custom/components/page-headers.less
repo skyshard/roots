@@ -1,0 +1,42 @@
+.page-header-lined {
+    margin: 2em 0 -1.5em 0;
+    border-top: 1px solid @headerColor;
+    text-align: center;
+    h1, h2, h3, h4, h5, h6 {
+      color: @headerColor;
+      font-weight: normal;
+      display: inline-block;
+      position: relative;
+      padding: 0 .8em;
+      background: @contentBackground;
+      text-transform: uppercase;
+      text-shadow: 0 1px 1px fade(@white, 50%);
+    }
+    h1 {
+      top: -0.75em;
+    }
+    h2 {
+      top: -0.95em;
+    }    
+    h3 {
+      top: -1.2em;
+    }
+    h4 {
+      top: -1.1em;
+    }
+    h5 {
+      top: -1.35em;
+    }
+    h6 {
+      top: -1.7em;
+    }
+}
+
+.page-header {
+  padding-bottom: 0;
+  margin: 0;
+  border-bottom: none;
+  h1, h2, h3, h4, h5, h6 {
+    border-bottom: 1px solid @headerBorderColor;
+  }
+}

@@ -1,0 +1,14 @@
+#content {
+  padding-bottom: @contentBottomPadding;
+  padding-top: @contentTopPadding;
+
+  .container.enclosure {
+    background-color: @white;
+    border: 1px solid #cecece;
+    .border-radius(5px);
+    .box-shadow(0 1px 2px -1px fade(@black, 30%));
+    position: relative;
+    top: @enclosureShiftHeight;
+    margin-bottom: @enclosureShiftHeight + @enclosureBottomMargin;
+  }
+}

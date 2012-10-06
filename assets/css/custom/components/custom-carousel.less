@@ -1,0 +1,85 @@
+/* CAROUSEL CSS */
+#carousel-container {
+  @carouselWidth: 950px;
+  @carouselHeight: 425px;
+  
+  height: @carouselHeight + 60;
+  width: 100%;
+  
+  #carousel {
+
+    width: @carouselWidth - 30;
+    margin: 0 auto;
+    position: relative;
+    /*
+      Slides container
+      Important:
+      Set the width of your slides container
+      Set to display none, prevents content flash
+    */
+
+    .slides_container {
+      width: @carouselWidth;
+      height: @carouselHeight;
+      overflow: hidden;
+      position: relative;
+      display: none;
+    }
+
+    /*
+      Each slide
+      Important:
+      Set the width of your slides
+      If height not specified height will be set by the slide content
+      Set to display block
+    */
+
+    #slides {
+      position: absolute;
+      top: 15px;
+      .slide {
+        padding: 20px;
+        width: @carouselWidth - 40;
+        height: @carouselHeight - 40;
+        display: block;
+      }
+      .next, .prev {
+        position: absolute;
+        top: @carouselHeight/2 - 30;
+        left: -30px;
+        width: 24px;
+        height: 43px;
+        display: block;      
+      }
+      .next {
+        left: @carouselWidth + 5;
+      }
+    }
+
+    /*
+      Pagination
+    */
+    .carousel-pagination {
+      width: 56px;
+      margin: 0px auto;
+      li {
+        float: left;
+        margin: 0 1px;
+        list-style: none;
+        a {
+          display: block;
+          width: 12px;
+          height: 0;
+          padding-top: 12px;
+          background-image: url('/assets/carousel/pagination.png');
+          background-position: 0 0;
+          float: left;
+          overflow: hidden;
+        }
+        &.current a {
+          background-position: 0 -12px;
+        }
+      }
+    }
+  }
+}

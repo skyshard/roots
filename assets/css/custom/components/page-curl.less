@@ -1,0 +1,75 @@
+/* PAGE CURL SHADOW EFFECT -- http://matthamm.com/box-shadow-curl.html*/
+
+div.page-curl {
+  position: relative;
+  z-index: 1; /* prevent shadows falling behind containers with backgrounds */
+  overflow: hidden;
+  list-style: none;
+  margin: 0;
+  padding: 0; 
+  float:left;
+}
+
+div.page-curl div.our-image img {
+  margin: 10px;
+}
+
+div.page-curl div.customer-image img {
+  margin: 5px;
+}
+
+div.page-curl div.our-image {
+  width: 120px;
+  height: 110px;
+}
+
+div.page-curl div.customer-image {
+  width: 100px;
+  height: 100px;
+  display: inline-block;  
+}
+
+div.page-curl div {
+  position: relative;
+  float: left;
+  padding: 0;
+  border: 1px solid #ffffff;
+  margin: 0 30px 30px 0;
+  background: #fff;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset; 
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset; 
+}
+
+
+div.page-curl div:before,
+div.page-curl div:after {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  width: 70%;
+  max-width: 250px; /* avoid rotation causing ugly appearance at large container widths */
+  max-height: 100px;
+  height: 55%;
+  -webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  -webkit-transform: skew(-15deg) rotate(-6deg);
+  -moz-transform: skew(-15deg) rotate(-6deg);
+  -ms-transform: skew(-15deg) rotate(-6deg);
+  -o-transform: skew(-15deg) rotate(-6deg);
+  transform: skew(-15deg) rotate(-6deg); 
+}
+
+
+div.page-curl div:after {
+  left: auto;
+  right: 10px;
+  -webkit-transform: skew(15deg) rotate(6deg);
+  -moz-transform: skew(15deg) rotate(6deg);
+  -ms-transform: skew(15deg) rotate(6deg);
+  -o-transform: skew(15deg) rotate(6deg);
+  transform: skew(15deg) rotate(6deg); 
+}

@@ -1,0 +1,58 @@
+// break this out into its own file since using "twitter/bootstrap/responsive.less" reimports variables/mixins, which kills our overrides
+
+// RESPONSIVE CLASSES
+// ------------------
+
+@import "./less/responsive-utilities.less";
+
+
+// MEDIA QUERIES
+// ------------------
+
+// Large desktops
+// disable the large 1200 px layout
+//@import "twitter/bootstrap/responsive-1200px-min.less";
+
+// Tablets to regular desktops
+@import "./less/responsive-768px-979px.less";
+
+// Phones to portrait tablets and narrow desktops
+@import "./less/responsive-767px-max.less";
+
+
+// RESPONSIVE NAVBAR
+// ------------------
+
+// From 979px and below, show a button to toggle navbar contents
+@import "./less/responsive-navbar.less";
+
+
+@media (max-width: 767px) {
+  footer#footer {
+    margin-left: -20px; 
+    margin-right: -20px;
+    padding-left: 20px; 
+    padding-right: 20px;
+    
+    #footer-content {
+      height: auto;
+    }
+  }
+  
+  #wrap {
+    min-height: auto;
+    height: auto !important;
+    margin: 0 auto 0;
+  }
+
+  #push, #footer {
+    height: auto;
+  }
+}
+
+@media (max-width: 979px) {
+  footer#footer {
+    position: static; 
+    z-index: @zindexFixedNavbar;
+  }
+}
