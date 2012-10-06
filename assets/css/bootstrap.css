@@ -1821,7 +1821,7 @@ table [class*=span],
   *margin-right: .3em;
   line-height: 14px;
   vertical-align: text-top;
-  background-image: url("less/less/../img/glyphicons-halflings.png");
+  background-image: url("less/less/../../../img/glyphicons-halflings.png");
   background-position: 14px 14px;
   background-repeat: no-repeat;
   margin-top: 1px;
@@ -1840,7 +1840,7 @@ table [class*=span],
 .dropdown-menu > li > a:hover > [class*=" icon-"],
 .dropdown-menu > .active > a > [class^="icon-"],
 .dropdown-menu > .active > a > [class*=" icon-"] {
-  background-image: url("less/less/../img/glyphicons-halflings-white.png");
+  background-image: url("less/less/../../../img/glyphicons-halflings-white.png");
 }
 .icon-glass {
   background-position: 0      0;
@@ -5437,6 +5437,69 @@ div.page-curl div:after {
 }
 .thumbnail > img {
   border: 1px solid #ffffff;
+}
+.post header {
+  position: relative;
+}
+.post header time {
+  display: block;
+  width: 50px;
+  color: #ffffff;
+  text-shadow: 0 1px rgba(85, 85, 85, 0.2);
+  padding: 4px 10px;
+  background-color: #3c98cf;
+  position: absolute;
+  left: -16px;
+  top: 5px;
+  -webkit-box-shadow: 2px 2px 3px -1px #555555;
+  -moz-box-shadow: 2px 2px 3px -1px #555555;
+  box-shadow: 2px 2px 3px -1px #555555;
+}
+.post header time:after {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 0px;
+  top: 100%;
+  border-width: 4px 8px;
+  border-style: solid;
+  border-color: #49608f #49608f transparent transparent;
+}
+.post footer {
+  font-size: 9.799999999999999px;
+}
+.post footer .entry-category {
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.post footer .entry-tags {
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#sidebar :first-child {
+  margin-top: 0;
+}
+#sidebar h3 {
+  color: rgba(34, 34, 34, 0.5);
+  border-bottom: 1px solid rgba(85, 85, 85, 0.5);
+  border-top: 1px solid rgba(85, 85, 85, 0.5);
+  margin-left: -5px;
+  padding: .25em 1em;
+  text-transform: uppercase;
+  text-shadow: 0 1px #ffffff;
+}
+#sidebar .widget_categories ul {
+  list-style-type: none;
+  margin: 0 25px 20px 25px;
+}
+#sidebar .widget_categories ul li {
+  border-bottom: 1px solid rgba(85, 85, 85, 0.5);
+  line-height: 30px;
 }
 #contact-us {
   margin-top: 50px;

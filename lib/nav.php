@@ -37,7 +37,15 @@ class Roots_Nav_Walker extends Walker_Nav_Menu {
     elseif (in_array('nav-header', $item->classes)) {
       $item_html = '<li class="nav-header">' . $item->title;
     }
-
+    
+    if (!empty($item->description)) {
+      $desc = "<small>{$item->description}</small>";
+    } else {
+      $desc = "<small>add description</small>";
+    }
+    
+    $item_html = str_replace('</a>', " $desc</a>", $item_html);
+    
     $output .= $item_html;
   }
 

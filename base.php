@@ -18,6 +18,11 @@
     <div id="content" role="document">
       <div class="container enclosure">
         <div class="row">
+          <div class="span12">
+            <h2><i class="icon-list-alt"></i>Blog Posts</h2>
+          </div>
+        </div>
+        <div class="row">
           <div id="main" class="<?php roots_main_class(); ?>" role="main">
             <?php include roots_template_path(); ?>
           </div>
