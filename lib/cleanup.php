@@ -180,7 +180,6 @@ if (roots_enable_root_relative_urls()) {
     'stylesheet_directory_uri',
     'template_directory_uri',
     'plugins_url',
-    'the_permalink',
     'wp_list_pages',
     'wp_list_categories',
     'wp_nav_menu',

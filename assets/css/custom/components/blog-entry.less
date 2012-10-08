@@ -1,17 +1,35 @@
+#content .enclosure {
+  .enclosure-header {
+    border-bottom: 1px solid @enclosureHeaderBorderColor;
+    h1,h2,h3,h4,h5,h6 {
+      padding: 0 .7em;
+      text-transform: uppercase;
+    }
+  }
+}
+
 .post {
-  header {
+  margin: @gridGutterWidth/2 -@gridGutterWidth/4 0 0;
+  padding-left: @gridGutterWidth/2;
+  
+  header.entry-header {
     position: relative;
+    
+    .row {
+      margin-left: 0;
+    }
+    
     time {
       @overhangWidth: 16px;
       display: block;
-      width: 50px;
+      width: 48px;
       color: @white;
       text-shadow: 0 1px fade(@gray, 20%);
       padding: 4px 10px;
       background-color: #3c98cf;
       position: absolute;
-      left: -@overhangWidth;
-      top: 5px;
+      left: -(@overhangWidth + @gridGutterWidth/2);
+      top: -(@gridGutterWidth/4);
       .box-shadow(2px 2px 3px -1px @gray);
       &:after {
         content: ' '; 
@@ -25,23 +43,50 @@
         border-color: #49608f #49608f transparent transparent;
       }
     }
+    .entry-comment-count {
+      font-size: .6em;
+      i {
+        margin-right: .8em;
+      }
+    }
+  }
+  
+  .entry-content {
+    margin-left: 0;
   }
   
   footer {
+    padding: 1em 0 1em 0;
     font-size: .7*@baseFontSize;
+    background-color: #fafafa;
+    border: 1px solid #f8f8f8;
+    border-width: 1px 0;
+    margin: 0 -@gridGutterWidth/2;
+    div:first-child {
+      margin-left: @gridGutterWidth/2;
+    }
+    
+    i {
+      margin-right: 1em;
+    }
     .entry-category {
-      max-width: 2*@gridColumnWidth;
+      max-width: 2*(@gridColumnWidth + @gridGutterWidth) - @gridGutterWidth;
       .text-overflow();
     }
     .entry-tags {
-      max-width: 5*@gridColumnWidth;
+      max-width: 5*(@gridColumnWidth + @gridGutterWidth) - @gridGutterWidth;
       .text-overflow();
+    }
+    
+    .entry-link {
+      text-align: right;
+      margin-right: @gridGutterWidth/2;
     }
   }
 }
 
 #sidebar {
-  :first-child {
+  section:first-child h3 {
     margin-top: 0;
   }
   
@@ -65,4 +110,9 @@
       }
     }
   }
+}
+
+#comments, #respond {
+  margin: @gridGutterWidth/2 -@gridGutterWidth/4 0 0;
+  padding-left: @gridGutterWidth/2;
 }

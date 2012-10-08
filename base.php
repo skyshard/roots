@@ -18,9 +18,7 @@
     <div id="content" role="document">
       <div class="container enclosure">
         <div class="row">
-          <div class="span12">
-            <h2><i class="icon-list-alt"></i>Blog Posts</h2>
-          </div>
+          <?php get_template_part('templates/page', 'header'); ?>
         </div>
         <div class="row">
           <div id="main" class="<?php roots_main_class(); ?>" role="main">
@@ -32,7 +30,7 @@
           </aside>
           <?php endif; ?>
         </div>
-      </div
+      </div>
     </div><!-- /#content -->
     <div id="push"></div>
   </div><!-- /#wrap -->

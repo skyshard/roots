@@ -11,53 +11,15 @@
         <dt>06</dt><dd>Authors</dd>
       </dl>
     </div>
-    <div class="span3">
-      <div class="footer-header">
-        <i class="icon-list icon-white"></i> <h3>Latest Posts</h3>
-      </div>
-      <ul class="unstyled">
-        <li>PR101</li>
-        <li>How to spell Uber</li>
-        <li>Snorting with co-workers</li>
-        <li>I am a ballerina</li>
-        <li>Photoshop files and more</li>
-      </ul>
-    </div>
-    <div class="span3">
-      <div class="footer-header">
-        <i class="icon-picture icon-white"></i> <h3>Clients</h3>
-      </div>
-      <ul class="thumbnails">
-        <li class="span1">
-          <a href="#" class="thumbnail"><img src="http://placehold.it/60x60" alt=""></a>
-        </li>
-        <li class="span1">
-          <a href="#" class="thumbnail"><img src="http://placehold.it/60x60" alt=""></a>
-        </li>
-        <li class="span1">
-          <a href="#" class="thumbnail"><img src="http://placehold.it/60x60" alt=""></a>
-        </li>
-        <li class="span1">
-          <a href="#" class="thumbnail"><img src="http://placehold.it/60x60" alt=""></a>
-        </li>
-        <li class="span1">
-          <a href="#" class="thumbnail"><img src="http://placehold.it/60x60" alt=""></a>
-        </li>
-        <li class="span1">
-          <a href="#" class="thumbnail"><img src="http://placehold.it/60x60" alt=""></a>
-        </li>
-      </ul>
-    </div>
+    <?php dynamic_sidebar('sidebar-footer'); ?>
     <div class="span3">
       <div class="footer-header">
         <i class="icon-twitter icon-white"></i> <h3>Tweets</h3>                
       </div>
       <div class='tweet'></div>
     </div>
-    
   </div>
 </div>
-<?php dynamic_sidebar('sidebar-footer'); ?>
 <div id="footer-navbar" class="navbar navbar-static-top">
   <div class="navbar-inner">
     <div class="container">

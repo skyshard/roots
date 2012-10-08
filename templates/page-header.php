@@ -1,5 +1,5 @@
-<div class="page-header">
-  <h1>
+<div class="enclosure-header span12">
+  <h3><i class="icon-list-alt"></i> 
     <?php
       if (is_home()) {
         if (get_option('page_for_posts', true)) {
@@ -34,5 +34,5 @@
         the_title();
       }
     ?>
-  </h1>
+  </h3>
 </div>

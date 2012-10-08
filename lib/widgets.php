@@ -14,10 +14,10 @@ function roots_widgets_init() {
   register_sidebar(array(
     'name'          => __('Footer', 'roots'),
     'id'            => 'sidebar-footer',
-    'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',
-    'after_widget'  => '</div></section>',
-    'before_title'  => '<h3>',
-    'after_title'   => '</h3>',
+    'before_widget' => '<div class="span3"><section id="%1$s" class="widget %2$s"><div class="widget-inner">',
+    'after_widget'  => '</div></section></div>',
+    'before_title'  => '<div class="footer-header"><h3>',
+    'after_title'   => '</h3></div>',
   ));
 
   // Register widgets
