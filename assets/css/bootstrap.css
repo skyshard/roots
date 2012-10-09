@@ -5088,7 +5088,7 @@ div.page-curl div:after {
 }
 #sidebar .widget_categories ul {
   list-style-type: none;
-  margin: 0 25px 20px 25px;
+  margin: 0 20px 20px 20px;
 }
 #sidebar .widget_categories ul li {
   border-bottom: 1px solid rgba(85, 85, 85, 0.5);
