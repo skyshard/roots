@@ -1,0 +1,22 @@
+.pagination {
+  display:inline-block;
+  
+  a, span {
+    border: none;
+    padding: 10px 4px;
+    margin: 0 5px;
+    background-color: white;
+  }
+  
+  span {
+    .box-shadow(0 3px 7px -3px fade(@gray, 50%));
+    .border-radius(3px);
+  }
+  
+  span.current {
+    .box-shadow(none);
+    background-color: transparent;
+    padding: 0 10px;
+  }
+}
+

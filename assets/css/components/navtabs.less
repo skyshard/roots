@@ -1,0 +1,42 @@
+.nav-tabs {
+  text-transform: uppercase;
+  
+  // Give the tabs something to sit on
+  border-bottom: 1px solid @tabbableBorderColor;
+  // Make the list-items overlay the bottom border
+  > li {
+    margin-bottom: -1px;
+  }
+  
+  > li > a {
+    background-color: fade(@tabbableBorderColor, 80%);
+    border: 1px solid @tabbableBorderColor;
+    border-bottom: @tabbableBorderBottomWidth solid @tabbableBorderColor;
+    padding-bottom: 5px;
+    &:hover {
+      border-color: @tabbableBorderColor @tabbableBorderColor @tabbableBorderColor;
+    }
+  }
+  
+  > li:last-child > a {
+    margin-right: 0;
+  }
+  
+  > .active > a,
+  > .active > a:hover {
+    height: @baseLineHeight + @tabbableBorderBottomWidth;
+    border: 1px solid @tabbableBorderColor;
+    border-bottom: 1px solid transparent;
+  }
+}
+
+.tab-content {
+  margin-top: -@gridGutterWidth;
+  border: 1px solid @tabbableBorderColor;
+  border-top: 0;
+  .border-radius(@componentBorderRadius);
+  .border-top-radius(0);
+  .padding-container {
+    padding: @gridGutterWidth * 1.2;
+  }
+}

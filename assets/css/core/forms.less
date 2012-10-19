@@ -1,0 +1,97 @@
+.control-group {
+  margin-bottom: @formGutter;
+  position: relative;
+  
+  &.success i {
+    color: @successText;
+    border-color: @successText;    
+  }
+  &.error i {
+    color: @errorText;
+    border-color: @errorText;
+  }
+
+  div.validation-error {
+    position:absolute;
+    left: 0px;
+    top: -18px;
+    color: @linkColor;
+    font-size: 12px;
+  }
+}
+
+.form-horizontal {
+  .control-group {
+    margin-bottom: @formGutter;
+  }
+}
+
+.enclosure {
+  .form-actions {
+    padding: 0 @baseLineHeight 0 @baseLineHeight;
+    margin-top: @baseLineHeight/2;
+    margin-bottom: 0;
+    background-color: @enclosureBackground;
+    border-top: 1px solid @enclosureBackground;
+  }
+  
+  .accordion-body {
+    .control-group.force_rank{
+      margin-bottom: 0;
+    }
+    
+    .control-group.force_rank_group{
+      margin-bottom: 0;
+    }
+    
+    .form-actions {
+      padding: 0;
+      margin: -(1.5*@baseLineHeight) 0 @baseLineHeight/2 @baseLineHeight;
+    }
+    
+    label abbr[title="required"] {
+      display: none;
+    }
+    
+    label.radio_buttons{
+      margin-bottom: 0;
+    }
+    
+    .help-block {
+      font-size: .85em;
+    }
+    
+    .side-block {
+      // TODO: make responsive
+      position: absolute;
+      left: 620px;
+      padding-left: 10px;
+      top: 0;
+      z-index: @zindexSideBlock;
+      width: 220px;
+      font-size: .85em;
+    }
+  }
+}
+
+.multi-text-add {
+  clear: left;
+}
+
+/*form input[type="radio"]{
+  border: 1px solid #aaa;
+  background: url('dots.png') 0px 0px no-repeat;
+}
+
+form input[type="radio"]:checked{
+  background: url('dots.png') 0px -16px no-repeat;
+}*/
+
+/*input[type="radio"]{
+  width: 16px;
+  height: 16px;
+  .border-radius(50%);
+  top: -1px;
+  position: relative;
+}
+*/

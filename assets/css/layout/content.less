@@ -1,0 +1,44 @@
+#content {
+  padding-bottom: @contentBottomPadding;
+  padding-top: @contentTopPadding;
+
+  .container-shift {
+    position: relative;
+    top: @enclosureShiftHeight;
+    margin-bottom: @enclosureShiftHeight + @enclosureBottomMargin;
+  }
+  
+  .enclosure {
+    background-color: @white;
+    border: @enclosureBorderThickness solid #cecece;
+    .box-sizing(border-box);
+    .border-radius(5px);
+    .box-shadow(0 1px 2px -1px fade(@black, 30%));
+    
+    .enclosure-header {
+      border-bottom: 1px solid @enclosureHeaderBorderColor;
+      h1,h2,h3,h4,h5,h6 {
+        padding: 0 .7em;
+        text-transform: uppercase;
+      }
+    }
+    
+    .row {
+      margin-left: -(@gridGutterWidth + @enclosureBorderThickness);
+      margin-right: -@enclosureBorderThickness;
+      position: relative;
+    }
+  }
+  
+  .padding-container {
+    padding: @contentContainerPadding;
+  }
+  
+  .padding-container-sides {
+    padding: 0 @contentContainerPadding;
+  }
+  
+  .padding-container-large {
+    padding: 5*@contentContainerPadding @contentContainerPadding;
+  }
+}

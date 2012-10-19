@@ -1,5 +1,5 @@
 <?php get_template_part('templates/head'); ?>
-<body <?php body_class(); ?>>
+<body id="splash" <?php body_class(); ?>>
 
   <!--[if lt IE 7]><div class="alert">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</div><![endif]-->
   <div id="wrap">  
@@ -25,7 +25,7 @@
             <?php include roots_template_path(); ?>
           </div>
           <?php if (roots_display_sidebar()) : ?>
-          <aside id="sidebar" class="<?php roots_sidebar_class(); ?>" role="complementary">
+          <aside id="sidebar" class="sidebar <?php roots_sidebar_class(); ?>" role="complementary">
             <?php get_template_part('templates/sidebar'); ?>
           </aside>
           <?php endif; ?>

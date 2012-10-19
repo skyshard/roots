@@ -7,7 +7,7 @@ function roots_widgets_init() {
     'id'            => 'sidebar-primary',
     'before_widget' => '<section id="%1$s" class="widget %2$s"><div class="widget-inner">',
     'after_widget'  => '</div></section>',
-    'before_title'  => '<h3>',
+    'before_title'  => '<h3 class="sidebar-header">',
     'after_title'   => '</h3>',
   ));
 

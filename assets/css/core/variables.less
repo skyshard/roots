@@ -1,0 +1,89 @@
+// Layout Components
+// -------------------------
+@canvasBackground:        #153E55; // THE BLUE
+
+@headerBackground:        @white;
+@headerHoverColor:        #f8f8f8;
+
+@mastheadBackground:      @canvasBackground;
+
+@contentBackground:       #d2d2d2;
+@enclosureBackground:     @white;
+
+@sidebarBackground:       #eee;
+@sidebarBorderColor:      darken(@sidebarBackground, 5%);
+
+@footerBackground:        @canvasBackground;
+@footerNavbarBackground:  #b44742;
+
+@bodyBackground:          @contentBackground;
+
+// Components
+// -------------------------
+@componentBorderRadius:       5px;
+
+@navbarBackgroundHighlight:   @white;
+@navbarBackground:            @white;
+
+@tabbableBorderColor:         @grayLighter;
+@tabbableBorderBottomWidth:   5px;
+
+@progressbarVerticalWidth:    @baseLineHeight;
+@progressbarBorderRadius:     2px;
+@progressbarFontSize:         12px;
+
+// Text
+// -------------------------
+@textColor:             #555;
+@headerNavColor:        #0096d2;
+@headerNavSmallColor:   #8f8f8f;
+@headerNavBorderColor:  #eee;
+
+@enclosureHeaderBorderColor:     fade(@grayLighter, 80%);
+
+@headerColor:           fade(@grayDarker, 70%);
+@headerBorderColor:     fade(@gray, 70%);
+
+@linkColor:             #F02C23;
+@linkColorHover:        lighten(@linkColor, 15%);
+
+// Typography
+// -------------------------
+@sansFontFamily:        "Source Sans Pro", Arial, Helvetica, sans-serif;
+
+@headingsFontFamily:    "Source Sans Pro", "Helvetica Neue", Arial, sans-serif; 
+@headingsFontWeight:    normal;
+
+// Dimensions
+// -------------------------
+@headerHeight:            80px;
+@headerNavButtonWidth:    120px;
+@headerNavButtonPadding:  10px;
+@headerBorderThickness:   5px;
+
+@mastheadHeaderSpacing:   @headerHeight + @baseLineHeight + 5px;
+@mastheadHeight:          290px - @mastheadHeaderSpacing;
+@mastheadLargeHeight:     490px - @mastheadHeaderSpacing;
+
+@contentTopPadding:       @baseLineHeight;
+@contentBottomPadding:    @baseLineHeight + 5;
+@contentContainerPadding: @baseLineHeight;
+@enclosureShiftHeight:    -(45px + @contentTopPadding);
+@enclosureBottomMargin:   @baseLineHeight + 5;
+@enclosureBorderThickness:   1px;
+
+@sidebarBorderThickness:  5px;
+
+@footerHeight:            300px;
+@hoverFooterPeekHeight:   50px;
+@footerNavbarHeight:      2*@baseLineHeight;
+
+// Forms
+// -------------------------
+@inputBorderRadius: 5px;
+@formGutter:        24px;
+
+// Z-index
+// -------------------------
+@zindexSideBlock: @zindexDropdown - 10;
+@zindexFooter:  @zindexDropdown;

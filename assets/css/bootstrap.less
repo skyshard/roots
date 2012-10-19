@@ -1,81 +1,91 @@
 // CSS Reset
-@import "less/reset.less";
+@import "twitter/bootstrap/reset.less";
 
 // Web Fonts
-@import "custom/core/fonts.less";
+@import "core/fonts.less";
 
 // Core variables and mixins
-@import "less/variables.less";
-@import "custom/core/variables.less"; // Override with our own variables
-@import "less/mixins.less";
-@import "custom/core/mixins.less"; // Override with our own mixins
+@import "twitter/bootstrap/variables.less";
+@import "core/variables.less"; // Override with our own variables
+@import "twitter/bootstrap/mixins.less";
+@import "core/mixins.less"; // Override with our own mixins
 
 // Grid system and page structure
-@import "less/scaffolding.less";
-@import "less/grid.less";
-@import "less/layouts.less";
+@import "twitter/bootstrap/scaffolding.less";
+@import "twitter/bootstrap/grid.less";
+@import "twitter/bootstrap/layouts.less";
 
 // Base CSS
-@import "less/type.less";
-@import "less/code.less";
-@import "less/forms.less";
-@import "less/tables.less";
+@import "twitter/bootstrap/type.less";
+@import "core/type.less";
+@import "twitter/bootstrap/code.less";
+@import "twitter/bootstrap/forms.less";
+@import "core/forms.less"; // Override with our own forms css
+@import "twitter/bootstrap/tables.less";
 
 // Components: common
-//@import "less/sprites.less";
-@import "less/dropdowns.less";
-@import "less/wells.less";
-@import "less/component-animations.less";
-@import "less/close.less";
+//@import "twitter/bootstrap/sprites.less";
+@import "twitter/bootstrap/dropdowns.less";
+@import "twitter/bootstrap/wells.less";
+@import "twitter/bootstrap/component-animations.less";
+@import "twitter/bootstrap/close.less";
 
 // Components: Buttons & Alerts
-@import "less/buttons.less";
-@import "less/button-groups.less";
-@import "less/alerts.less"; // Note: alerts share common CSS with buttons and thus have styles in buttons.less
+@import "twitter/bootstrap/buttons.less";
+@import "core/buttons.less";
+@import "twitter/bootstrap/button-groups.less";
+@import "twitter/bootstrap/alerts.less"; // Note: alerts share common CSS with buttons and thus have styles in buttons.less
 
 // Components: Nav
-@import "less/navs.less";
-@import "less/navbar.less";
-@import "custom/components/navbar.less";
-@import "less/breadcrumbs.less";
-@import "less/pagination.less";
-@import "less/pager.less";
+@import "twitter/bootstrap/navs.less";
+@import "components/navtabs.less";
+@import "twitter/bootstrap/navbar.less";
+@import "components/navbar.less";
+@import "twitter/bootstrap/breadcrumbs.less";
+@import "twitter/bootstrap/pagination.less";
+@import "core/pagination.less";
+@import "twitter/bootstrap/pager.less";
+@import "core/pager.less";
 
 // Components: Popovers
-@import "less/modals.less";
-@import "less/tooltip.less";
-@import "less/popovers.less";
+@import "twitter/bootstrap/modals.less";
+@import "twitter/bootstrap/tooltip.less";
+@import "twitter/bootstrap/popovers.less";
 
 // Components: Misc
-@import "less/thumbnails.less";
-@import "less/labels-badges.less";
-@import "less/progress-bars.less";
-@import "less/accordion.less";
-@import "less/carousel.less";
-@import "less/hero-unit.less";
+@import "twitter/bootstrap/thumbnails.less";
+@import "twitter/bootstrap/labels-badges.less";
+@import "twitter/bootstrap/progress-bars.less";
+@import "components/progress-bars.less";  // from http://minddust.github.com/bootstrap-progressbar/
+//@import "twitter/bootstrap/accordion.less";
+@import "components/accordion.less";
+@import "twitter/bootstrap/carousel.less";
+@import "twitter/bootstrap/hero-unit.less";
 
 // Layout components
-@import "custom/layout/header.less";
-@import "custom/layout/masthead.less";
-@import "custom/layout/content.less";
-@import "custom/layout/sidebar.less";
-@import "custom/layout/footer.less";
+@import "layout/header.less";
+@import "layout/masthead.less";
+@import "layout/content.less";
+@import "layout/sidebar.less";
+@import "layout/footer.less";
 
 // Custom components
-@import "custom/components/custom-prepend.less";
-@import "custom/components/page-curl.less";
-@import "custom/components/feedback-bubble.less";
-@import "custom/components/page-headers.less";
-@import "custom/components/custom-carousel.less";
-@import "custom/components/arrows.less";
-@import "custom/components/thumbnails.less";
-@import "custom/components/blog-entry.less";
+@import "components/custom-prepend.less";
+@import "components/page-curl.less";
+@import "components/feedback-bubble.less";
+@import "components/page-headers.less";
+@import "components/custom-carousel.less";
+@import "components/arrows.less";
+@import "components/thumbnails.less";
+@import "components/jquery-tools-dateinput.less";
+@import "components/bootstrap-notify.less";
 
 // Page specific components
-@import "custom/components/pages.less";
+@import "components/pages.less";
+@import "components/blog-entry.less";
 
 // Utility classes
-@import "less/utilities.less"; // Has to be last to override when necessary
+@import "twitter/bootstrap/utilities.less"; // Has to be last to override when necessary
 
 // Responsive 
 // break this out into its own file since using "twitter/bootstrap/responsive.less" reimports variables/mixins, which kills our overrides
@@ -83,7 +93,7 @@
 // RESPONSIVE CLASSES
 // ------------------
 
-@import "less/responsive-utilities.less";
+@import "twitter/bootstrap/responsive-utilities.less";
 
 
 // MEDIA QUERIES
@@ -94,17 +104,17 @@
 //@import "twitter/bootstrap/responsive-1200px-min.less";
 
 // Tablets to regular desktops
-@import "less/responsive-768px-979px.less";
+@import "twitter/bootstrap/responsive-768px-979px.less";
 
 // Phones to portrait tablets and narrow desktops
-@import "less/responsive-767px-max.less";
+@import "twitter/bootstrap/responsive-767px-max.less";
 
 
 // RESPONSIVE NAVBAR
 // ------------------
 
 // From 979px and below, show a button to toggle navbar contents
-@import "less/responsive-navbar.less";
+@import "twitter/bootstrap/responsive-navbar.less";
 
 
 @media (max-width: 767px) {
@@ -146,4 +156,4 @@
 }
 
 // FontAwesome (replaces bootstrap icons)
-@import 'custom/components/fontawesome.less';
+@import 'components/fontawesome.less';

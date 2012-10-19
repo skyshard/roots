@@ -1,0 +1,335 @@
+// Contact Us page
+// -------------------------
+#contact-us {
+}
+
+// PR 101 page
+// -------------------------
+#pr101 {
+  li {
+    margin-bottom: 12px;
+  }
+  .span4 {
+    padding-right: 23px;
+    border-right: 1px solid fade(@headerColor, 30%);
+  }
+  .row-fluid > div:last-child {
+    border-right: none;
+  }
+  .page-header-lined {
+    margin-bottom: 10px;
+  }
+}
+
+// About Us page
+// -------------------------
+#about-us {  
+  .span2 {
+    min-width: 120px;
+  }
+  
+  a {
+    color: #959595;
+    
+    &:hover {
+      color: #414141;
+      cursor: pointer;
+    }
+  }
+  
+  h4 {
+    text-transform: uppercase;
+    margin-top: 0;
+  }
+  
+  .row-bio {
+    margin-bottom: @baseLineHeight;
+  }
+}
+
+// Shortcuts partial
+// -------------------------
+#shortcuts {
+  .page-header {
+    color: @headerColor;
+  }
+}
+
+// Customer Feedback partial
+// -------------------------
+#customer-feedback {
+  background-color: #BDBDBD;
+  padding: 20px 0px;
+  
+  .customer-name {
+    color: #BA3030;
+    text-transform: uppercase;
+  }
+  
+  .img-polaroid {
+    padding: 10px;
+    .box-shadow(0 0 3px 1px fade(@gray, 50%));
+    .border-radius(5px);
+  }
+  .feedback-bubble {
+    height: 97px;
+  }
+}
+
+// Thank You page
+// -------------------------
+#thankyou {
+  padding: 50px 0;
+  p {
+   font-size: 13px;
+   margin: 0px;
+  }
+  h3 {
+    color: #203E53;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
+
+// Customer Feedback partial
+// -------------------------
+#message-listing {
+  img {
+    .box-shadow(0 0 3px 1px fade(@gray, 30%));
+    .border-radius(5px);
+  }
+  #sender-name {
+    color: #BA3030;
+    text-transform: uppercase;
+  }
+  hr {
+    border-top: 1px solid fade(@headerColor, 40%);
+    border-bottom: none;
+    margin: 10px 0px 0px 0px;
+  }
+  
+  .message-blob {
+    margin-bottom: 25px;
+  }
+}
+
+
+// FAQ page
+// -------------------------
+#faq {
+  dt {
+    margin-top: 26px;
+  }
+  
+  dd {
+    margin-top: 3px;
+  }
+}
+
+// PR Profile page
+// -------------------------
+#pr-profile {
+  .dl-horizontal dd {
+    margin-left: 80px;
+    color: @linkColor;
+  }
+  .dl-horizontal dt {
+    width: 70px;
+  }
+  #profile-right-pane {
+    .transition(all 1s ease-in-out);
+  }
+}
+
+// PR Project display page
+// -------------------------
+#pr-project {
+  #site-thumbnail {
+    margin-right: -@gridGutterWidth;
+  }
+  
+/*  #profile-right-pane {
+    max-height: 530px;
+    overflow: hidden;
+  }
+*/
+}
+
+// Client Bid Page
+// -------------------------
+#client-bid-page {
+  .dl-horizontal dd {
+    margin-left: 80px;
+    color: @linkColor;
+  }
+  .dl-horizontal dt {
+    width: inherit;
+  }
+  #profile-right-pane {
+    .transition(all 1s ease-in-out);
+  }
+}
+
+// Messages/ Conversations View
+// -------------------------
+#messages {
+  #message-list .message-row{
+    padding: 1em 0;
+    font-size: @baseFontSize;
+    border-bottom: 1px solid @headerBorderColor;
+    display: table;
+    .message-name {
+      color: @linkColor;
+      vertical-align: middle;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    .message-desc {
+      color: @textColor;
+      text-overflow: ellipsis;
+      overflow: hidden;
+
+    }
+    .message-archive {
+    }
+  }
+}
+
+
+// Bids
+// -------------------------
+#bids {
+  #bid-list .bid-row{
+    padding: 1em 0;
+    font-size: @baseFontSize;
+    border-bottom: 1px solid @headerBorderColor;
+    
+    .thumbnail img {
+      max-height: 120px;
+    }
+    
+    .bid-name {
+      color: @linkColor;
+      margin-top: @baseLineHeight/2;
+      display: block;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    
+    .bid-price {
+      color: @grayDarker;
+      display: block;
+      font-size: @baseFontSize*2.1;
+      line-height: 34px;
+      text-align: center;
+    }
+    
+    .bid-duration {
+      color: @grayDarker;
+      font-size: @baseFontSize*.8;
+      text-transform: uppercase;
+    }
+    
+    .bid-graphs {
+      height: 85px;
+      width: 5*(@progressbarVerticalWidth + 5) - 5;
+      margin: 0 auto 25px;
+      .clearfix();
+      .bid-graph {
+        height: 100%;
+        position: relative;
+        display: block;
+        float: left;
+        
+        .progress.vertical {
+          margin-right: 5px;
+          .border-radius(@progressbarBorderRadius);
+
+          .bar {
+            .border-radius(@progressbarBorderRadius);
+          }
+        }
+        
+        &:last-child .progress.vertical {
+          margin-right: 0;
+        }
+        
+        i {
+          position: absolute;
+          bottom: -22px;
+          left: 1px;
+          color: @black;
+        }
+      }
+    }
+    
+    .bid-desc {
+      color: @textColor;
+      vertical-align: center;
+    }
+  }
+  
+  .project-links {
+    margin-left: 360px;
+  }
+  ul.unstyled {
+    margin: 0;
+  }
+
+  #bid-grid {
+    .thumbnail {
+      &:hover .bid-footer {
+        bottom: 0px;
+      }
+
+      .bid-price, .icon-reorder {
+        font-size: 15px;
+        color: lighten(@contentBackground, 10%);
+        margin: 13px 5px 0px 0px;
+        display: inline-block;
+      }
+
+      .bid-header {
+        position: absolute;
+        top: 13px;
+        left: 0px;
+        border: 1px solid fade(white, 50%);
+        background-color: fade(@footerNavbarBackground, 60%);
+        width: 100%;
+        min-height: 40px;
+      }
+
+      .bid-price {
+        font-size: 22px;
+        margin: 13px 0px 0px 5px;
+      }
+
+      .bid-footer {
+        color: #AC403B;
+        position: absolute;
+        bottom: -100px;
+        left: 0px;
+        background-color: fade(white, 90%);
+        width: 100%;
+        padding: 10px 10px;
+        .bid-footer-heading {
+          text-transform: uppercase;
+          font-size: 18px;
+          margin-bottom: 7px;
+        }
+        .bid-footer-subheading {
+          color: black;
+          padding-right: 5px;
+        }
+        .bid-footer-content {
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          width: 90%;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,48 @@
+// Use parentheses for mixins that should only included in other selectors, no parens for things that can be standalone classes
+
+.override-gradient() {
+  background-color: transparent;
+  background-image: none; // need to repeat to override each of the vendor prefixed properties
+  background-image: none;
+  background-image: none;
+  background-image: none;
+  background-image: none;
+  background-image: none;
+  background-repeat: no-repeat;
+  filter: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.responsive-expand() {
+  margin-left: -20px; 
+  margin-right: -20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.animation(@name, @time, @type) {
+  -webkit-animation: @name @time @type;
+     -moz-animation: @name @time @type;
+       -o-animation: @name @time @type;
+          animation: @name @time @type;
+}
+
+.double-radial()  {
+  background-image: -webkit-radial-gradient(75% 85px, farthest-corner, #1F6689, transparent), -webkit-radial-gradient(25% 77%, closest-corner, #1F6689, #163E54);
+  background-image: -moz-radial-gradient(75% 85px, farthest-corner, #1F6689, transparent), -moz-radial-gradient(25% 77%, closest-corner, #1F6689, #163E54);
+  background-image: -o-radial-gradient(75% 85px, farthest-corner, #1F6689, transparent), -o-radial-gradient(25% 77%, closest-corner, #1F6689, #163E54);
+  background-repeat: no-repeat;
+}
+
+
+.transition(@transitionA, @transitionB:X, ...) {
+  // Multiple shadow solution from http://toekneestuck.com/blog/2012/05/15/less-css-arguments-variable/
+  @props: ~`"@{arguments}".replace(/[\[\]]|\,\sX/g, '')`;
+  -webkit-transition: @props;
+     -moz-transition: @props;
+       -o-transition: @props;
+          transition: @props;
+}

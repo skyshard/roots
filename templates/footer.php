@@ -1,4 +1,4 @@
-<div id="footer-content" class="container" role="contentinfo">
+<?php /*<div id="footer-content" class="container" role="contentinfo">
   <div class="row">
     <div class="span3">
       <div class="footer-header">
@@ -20,6 +20,8 @@
     </div>
   </div>
 </div>
+*/
+?>
 <div id="footer-navbar" class="navbar navbar-static-top">
   <div class="navbar-inner">
     <div class="container">
@@ -31,16 +33,15 @@
       </div>
       <ul class="nav pull-right">
         <li class="divider-vertical"></li>
-        <li><a href="#"><i class="icon-facebook icon-white icon-large"></i></a></li>
+        <li><a href="http://www.facebook.com/airpr" target="_blank"><i class="icon-facebook icon-white icon-large"></i></a></li>
         <li class="divider-vertical"></li>
-        <li><a href="#"><i class="icon-twitter icon-white icon-large"></i></a></li>
-        <li class="divider-vertical"></li>
-        <li><a href="#" onClick='window.open("https://www.google.com/talk/service/badge/Start?tk=z01q6amlq2kkftdmgirlgnjoftmdtlnvcdvuf0du34b4thuc8vbs6mkj51sceq06b0aitc4galcefsvg6bci0plrosm32d6gpra885gvgl80q5aa3j6rrr7pi25j8822vogotivkit89ahe35gg55eq3nke4f7bsl3cva0l4s","Chat","width=200,height=400");' title="Click here to chat with AirPR"><i class="icon-comment icon-white icon-large"></i></a></li>
+        <li><a href="http://www.twitter.com/airpr" target="_blank"><i class="icon-twitter icon-white icon-large"></i></a></li>
         <li class="divider-vertical"></li>
       </ul>
     </div>
   </div>
 </div>
+
 
 <?php if (GOOGLE_ANALYTICS_ID) : ?>
 <script>

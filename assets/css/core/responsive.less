@@ -1,0 +1,138 @@
+// break this out into its own file since using "twitter/bootstrap/responsive.less" reimports variables/mixins, which kills our overrides
+
+// RESPONSIVE CLASSES
+// ------------------
+
+@import "twitter/bootstrap/responsive-utilities.less";
+
+
+// MEDIA QUERIES
+// ------------------
+
+// Large desktops
+// disable the large 1200 px layout
+//@import "twitter/bootstrap/responsive-1200px-min.less";
+
+// Tablets to regular desktops
+@import "twitter/bootstrap/responsive-768px-979px.less";
+
+// Phones to portrait tablets and narrow desktops
+@import "twitter/bootstrap/responsive-767px-max.less";
+
+
+// RESPONSIVE NAVBAR
+// ------------------
+
+// From 979px and below, show a button to toggle navbar contents
+@import "twitter/bootstrap/responsive-navbar.less";
+
+
+@media (max-width: 767px) {
+  header#header {
+    .responsive-expand();
+    .navbar .nav > li > a {
+      width: auto;
+      padding: 9px 15px;
+    }
+    .navbar-inner {
+      height: auto;
+    }
+  }
+  
+  #content {
+    .enclosure {
+      .responsive-expand();
+      .row {
+        margin-left: -@enclosureBorderThickness;
+      }
+    }
+  }
+  
+  #masthead {
+    .responsive-expand();
+  }
+  
+  footer#footer {
+    .responsive-expand();
+    
+    #footer-content {
+      height: auto;
+    }
+  }
+  
+  // disable the code to push the footer down / let it expand since the spans become full width
+  #wrap, #splash #wrap {
+    min-height: auto;
+    height: auto !important;
+    margin: 0 auto 0;
+  }
+
+  #push, #splash #push, #footer{
+    height: auto;
+  } 
+  
+  #hover-footer #footer{
+    #footer-inner, #footer-top, #footer-contents {
+      height: auto;
+    }
+  }
+  
+  .carousel(@gridRowWidth768 - 380);
+  
+  #customer-feedback {
+    .customer-image {
+      float:left !important;
+      width: 30%;
+    }
+    .feedback-bubble {
+      float:left !important;
+      width: 70%;
+    }
+  }
+  
+  .sidebar {  
+    display: none;
+    margin-left: -@sidebarBorderThickness;
+  }
+}
+
+@media (max-width: 979px) {
+  header#header {
+    .responsive-expand();
+    .navbar .nav > li > a {
+      width: auto;
+      padding: 9px 15px;
+    }
+    .navbar-inner {
+      height: auto;
+    }
+  }
+  
+  footer#footer {
+    position: static; 
+    z-index: @zindexFixedNavbar;
+  }
+  
+  .square-grid(@gridColumnWidth768);
+}
+
+@media (max-width: 979px) and (min-width: 767px) { 
+  .carousel(@gridRowWidth768);  
+  
+  .sidebar {  
+    margin-left: @gridGutterWidth768 - @sidebarBorderThickness;
+  }
+}
+
+/*
+@media (-webkit-min-device-pixel-ratio:2) {
+  form input[type="radio"]{
+    border: 1px solid #aaa;
+    background: url('dots@2x.png') 0px 0px no-repeat;
+    background-size: 32px 32px;
+  }
+
+  form input[type="radio"]:checked{
+    background: url('dots@2x.png') 0px -16px no-repeat;
+  }
+}*/

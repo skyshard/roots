@@ -1,0 +1,181 @@
+.headerVerticalAlign(@elementHeight) {
+  margin-top: (@headerHeight - @elementHeight) / 2;
+}
+
+header#header {
+  @headerBorderThickness: 5px;
+  @loginFormTop: -72px;
+  
+  .navbar {
+    position: relative;
+    z-index: @zindexFixedNavbar;
+
+    .divider-vertical {
+      height: @headerHeight;
+      border-left: 1px solid darken(@headerBackground, 15%);
+    }
+    
+    .btn-group {
+      .headerVerticalAlign(30px); // Vertically center in navbar
+    }
+    
+    .nav > li {
+      border-bottom: @headerBorderThickness solid @headerHoverColor;
+      border-left: 1px solid darken(@headerBackground, 15%);
+      > a {
+        padding: ((@headerHeight - 2*@baseLineHeight) / 2) @headerNavButtonPadding ((@headerHeight - 2*@baseLineHeight) / 2 - 1) @headerNavButtonPadding - 1;
+        width: @headerNavButtonWidth - (2*(@headerNavButtonPadding) - 1);
+        span {
+          text-transform: uppercase;
+          color: @headerNavColor;
+          border-bottom: 1px solid @headerNavBorderColor;
+          display: block;
+          .transition(color 0.1s ease);
+          b.caret {
+            float: right;
+          }
+        }
+        small {
+          display: block;
+          color: @headerNavSmallColor;
+          .transition(color 0.1s ease);
+        }
+      }
+      
+      &.active > a {
+        background-color: @white;
+        .box-shadow(none);
+        span {
+          color: darken(@headerNavColor, 25%);
+        }
+        small {
+          color: @gray;
+        }
+      }
+      
+      > a:hover {
+        background-color: @headerHoverColor;
+        span {
+          color: darken(@headerNavColor, 25%);
+        }
+        small {
+          color: @gray;
+        }
+      }
+    } 
+  }
+
+
+  .login-up-move-frames() {
+    0% {
+      top: @headerHeight + 3;
+    }
+    100% {
+      top: @loginFormTop;
+    }
+  }
+
+  @-webkit-keyframes login-up-move {.login-up-move-frames}
+  @-moz-keyframes login-up-move {.login-up-move-frames}
+  @-ms-keyframes login-up-move {.login-up-move-frames}
+  @-o-keyframes login-up-move {.login-up-move-frames}
+  @keyframes login-up-move {.login-up-move-frames}
+
+
+  .login-down-move-frames() {
+    0% {
+      z-index: -1;      
+      top: @loginFormTop;
+    }
+    100% {
+      z-index: -1;      
+      top: @headerHeight + 3;
+    }
+  }
+  
+  @-webkit-keyframes login-down-move {.login-down-move-frames}
+  @-moz-keyframes login-down-move {.login-down-move-frames}
+  @-ms-keyframes login-down-move {.login-down-move-frames}
+  @-o-keyframes login-down-move {.login-down-move-frames}
+  @keyframes login-down-move {.login-down-move-frames}
+  
+  .navbar-inner {
+    border-bottom: @headerBorderThickness solid @headerHoverColor;
+    .border-radius(0);
+    .box-shadow(0 10px 13px -7px fade(@black, 50%));
+    height: @headerHeight;
+    background-color: @headerBackground;
+    
+    .open {
+      background-color: @headerHoverColor;
+    }
+    
+    #login-dropdown {
+      top: @loginFormTop;
+      background-color: @headerHoverColor;
+      border: none;
+      display: block;
+      border-radius: 0px;
+      padding: 24px 8px 5px 8px;
+      right: -1px;
+      z-index: -1;
+      opacity: 0;
+      .animation(login-up-move, 0.2s, linear);
+
+      #logout form {
+       display: inline-block; 
+      }
+              
+      .control-group {
+        margin-bottom: 9px;
+      }
+      
+      input[type=submit] {
+        margin-top: 0px;
+      }
+      
+      &::before, &::after {
+        content : none;
+        border-color: transparent;        
+      }
+      
+      a {
+        display: inline-block;
+        padding: 3px 0px 0px 5px;
+        font-size: 16px;
+        color: @linkColor;
+        letter-spacing: 1px;
+      }
+      a:hover {
+        color: @linkColorHover;
+      }
+      hr {
+        clear: both;
+        margin: 0px;
+        border-top: 1px solid #DDD;
+        border-bottom: none;
+      }
+    }
+    
+    .open > #login-dropdown {
+      top: @headerHeight + 2;
+      .animation(login-down-move, 0.2s, linear);
+      z-index: 1;
+    }
+
+  }  
+  
+  .navbar-form {
+    .checkbox {
+      .headerVerticalAlign(30px); // Vertically center in navbar
+    }
+  }
+  
+  .navbar-text {
+    line-height: @headerHeight;
+  }
+  
+  .navbar-search {
+    .headerVerticalAlign(30px); // Vertically center in navbar
+  }
+}
