@@ -2,4 +2,18 @@
   background-color: @sidebarBackground;
   border-left: @sidebarBorderThickness solid @sidebarBorderColor;
   margin-left: @gridGutterWidth - @sidebarBorderThickness;
+  
+  section:first-child h3 {
+    margin-top: 0;
+  }
+  
+  h3 {
+    color: @headerColor;
+    border-bottom: 1px solid @headerBorderColor;
+    border-top: 1px solid @headerBorderColor;
+    margin-left: -5px;
+    padding: .25em 1em;
+    text-transform: uppercase;
+    text-shadow: 0 1px @white;
+  }
 }
