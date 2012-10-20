@@ -25,6 +25,18 @@ function roots_widgets_init() {
 }
 add_action('widgets_init', 'roots_widgets_init');
 
+function custom_tag_cloud_widget($args) {
+  $args['number'] = 0; //adding a 0 will display all tags
+  $args['largest'] = 12; //largest tag
+  $args['smallest'] = 12; //smallest tag
+  $args['unit'] = 'px'; //tag font unit
+  $args['format'] = 'list'; //ul with a class of wp-tag-cloud
+  $args['exclude'] = array(20, 80, 92); //exclude tags by ID
+  //$args['taxonomy'] = array('post_tag', 'ingredients'); //add post tags and ingredients taxonomy
+  return $args;
+}
+add_filter( 'widget_tag_cloud_args', 'custom_tag_cloud_widget' );
+
 // Example vCard widget
 class Roots_Vcard_Widget extends WP_Widget {
   private $fields = array(

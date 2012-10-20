@@ -16,7 +16,7 @@
     </div>
     
     <div id="content" role="document">
-      <div class="container enclosure">
+      <div id="blog" class="container enclosure">
         <div class="row">
           <?php get_template_part('templates/page', 'header'); ?>
         </div>
