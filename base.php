@@ -25,7 +25,7 @@
             <?php include roots_template_path(); ?>
           </div>
           <?php if (roots_display_sidebar()) : ?>
-          <aside id="sidebar" class="sidebar <?php roots_sidebar_class(); ?>" role="complementary">
+          <aside id="sidebar" class="sidebar full-height <?php roots_sidebar_class(); ?>" role="complementary">
             <?php get_template_part('templates/sidebar'); ?>
           </aside>
           <?php endif; ?>

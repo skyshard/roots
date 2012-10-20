@@ -23,7 +23,7 @@ class Roots_Nav_Walker extends Walker_Nav_Menu {
   function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
     $item_html = '';
     parent::start_el($item_html, $item, $depth, $args);
-
+    $item_html = preg_replace('/(<a.+>)(.+)<\/a>/','${1}<span>${2}</span></a>',$item_html);
     if ($item->is_dropdown && ($depth === 0)) {
       $item_html = str_replace('<a', '<a class="dropdown-toggle" data-toggle="dropdown" data-target="#"', $item_html);
       $item_html = str_replace('</a>', ' <b class="caret"></b></a>', $item_html);

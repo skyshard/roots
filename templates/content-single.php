@@ -9,12 +9,12 @@
         <?php endif; ?>
       </a>
       <div class="row">
-        <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a> <div class="entry-comment-count pull-right"><?php echo fb_get_comments_count(); ?></div>
+        <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
       </div>
       <?php get_template_part('templates/entry-meta'); ?>
     </header>
     <div class="entry-content">
-      <?php the_excerpt(); ?>
+      <?php the_content(); ?>
     </div>
     <footer class="row">
       <div class="span2">

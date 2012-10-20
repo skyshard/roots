@@ -23,14 +23,14 @@ function roots_display_sidebar() {
      */
     array(
       'is_404',
-      'is_front_page'
+//      'is_front_page'
     ),
     /**
      * Page template checks (via is_page_template())
      * Any of these page templates that return true won't show the sidebar
      */
     array(
-      'page-custom.php'
+//      'page-custom.php'
     )
   );
 
